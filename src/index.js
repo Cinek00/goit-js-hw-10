@@ -59,7 +59,7 @@ function renderCountryInfo(country) {
   const countryHTML = `
     <div>
       <img src="${country.flags.svg}" alt="${country.name.official}">
-      <h2>${country.name}</h2>
+      <h2>${country}</h2>
       <p><strong>Capital:</strong> ${country.capital}</p>
       <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
       <p><strong>Languages:</strong> ${languages}</p>
