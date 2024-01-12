@@ -9,18 +9,7 @@ const updateCountryList = (countries) => {
 
   countries.forEach((country) => {
     const listItem = document.createElement('li');
-    listItem.style.listStyle = 'none'; // Usunięcie kropek z listy
-    listItem.style.marginBottom = '10px'; // Dodanie odstępu między elementami listy
-
-    const flagImage = document.createElement('img');
-    flagImage.src = country.flag;
-    flagImage.alt = `Flaga ${country.officialName}`;
-    flagImage.style.width = '20px'; // Ustawienie szerokości obrazka flagi
-    flagImage.style.height = '15px'; // Ustawienie wysokości obrazka flagi
-    flagImage.style.marginRight = '10px'; // Dodanie marginesu prawego dla obrazka flagi
-
-    listItem.appendChild(flagImage);
-    listItem.appendChild(document.createTextNode(country.officialName));
+    listItem.textContent = country.officialName;
     countryListElement.appendChild(listItem);
   });
 };
