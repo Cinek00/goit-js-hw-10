@@ -63,7 +63,12 @@ const searchCountries = debounce(() => {
         updateCountryInfo(null);
       } else {
         updateCountryList(countries);
-        updateCountryInfo(countries[0] || null);
+
+        if (countries.length === 1) {
+          updateCountryInfo(countries[0]);
+        } else {
+          updateCountryInfo(null);
+        }
       }
     })
     .catch(error => {
